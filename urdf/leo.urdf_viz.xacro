@@ -10,14 +10,14 @@
   <xacro:include filename="$(find leo_description)/urdf/include/leo.gazebo.xacro"/>
   <xacro:include filename="$(find leo_description)/urdf/include/erc_setup.urdf.xacro"/>
 
-  <xacro:if value="$(arg fixed)">
+  <xacro:value="$(arg fixed)">
     <link name="world"/>
     <joint name="fixed" type="fixed">
       <parent link="world"/>
       <child link="base_link"/>
       <origin xyz="0.0 0.0 0"/>
     </joint>
-  </xacro:if>
+  </xacro>
 
   <!-- MACROS -->
 
